@@ -3,80 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <title>Irala Iliyaz Basha | Data Engineer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
+<!-- Animated Background -->
+<div class="bg-animation"></div>
+
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-content">
-    <h1>Irala Iliyaz Basha</h1>
-    <p class="subtitle">Data Engineer · ITTStar Consulting LLC</p>
+<section class="hero">
+  <h1 class="fade-in">Irala Iliyaz Basha</h1>
+  <p class="fade-in delay">Data Engineer · ITTStar Consulting LLC</p>
 
-    <div class="hero-links">
-      <a href="https://github.com/iliyaz3021" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
-    </div>
+  <div class="hero-actions fade-in delay2">
+    <a href="https://github.com/iliyaz3021" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank">LinkedIn</a>
   </div>
-</div>
+</section>
 
-<!-- MAIN -->
-<div class="container">
+<!-- CONTENT -->
+<main class="content">
 
-  <section class="glass">
-    <h2>About Me</h2>
+  <section class="card reveal">
+    <h2>About</h2>
     <p>
-      Fresher Data Engineer with hands-on experience in building ETL pipelines,
-      writing optimized SQL queries, and working with cloud-based data platforms.
-      Passionate about transforming raw data into reliable, analytics-ready datasets.
+      Data Engineer focused on building scalable, reliable data pipelines
+      with strong foundations in ETL, SQL, and cloud-based data systems.
     </p>
   </section>
 
-  <section class="glass">
-    <h2>Technical Skills</h2>
-    <div class="skill-grid">
-      <span>Python</span>
-      <span>SQL</span>
-      <span>ETL Pipelines</span>
-      <span>Data Modeling</span>
-      <span>Cloud Data</span>
+  <section class="card reveal">
+    <h2>Skills</h2>
+    <div class="chips">
+      <span>Python</span><span>SQL</span><span>ETL</span>
+      <span>Data Modeling</span><span>Cloud Data</span>
     </div>
   </section>
 
-  <section class="glass">
+  <section class="card reveal">
     <h2>Projects</h2>
 
-    <div class="project-grid">
+    <div class="project">
+      <h3>Sales Data ETL Pipeline</h3>
+      <p>End-to-end ETL pipeline transforming raw data into analytics-ready datasets.</p>
+      <a href="#">View Project →</a>
+    </div>
 
-      <div class="project-card">
-        <h3>Sales Data ETL Pipeline</h3>
-        <p>
-          End-to-end ETL pipeline that ingests raw sales data, applies
-          transformations, and loads analytics-ready data for reporting.
-        </p>
-        <a href="#">View Project →</a>
-      </div>
-
-      <div class="project-card">
-        <h3>AWS Cloud Data Pipeline</h3>
-        <p>
-          Cloud-native data pipeline with structured storage, transformation,
-          and ad-hoc analytics capabilities.
-        </p>
-        <a href="#">View Project →</a>
-      </div>
-
+    <div class="project">
+      <h3>AWS Cloud Data Pipeline</h3>
+      <p>Cloud-native data pipeline for scalable storage and querying.</p>
     </div>
   </section>
 
-  <section class="glass contact">
+  <section class="card reveal">
     <h2>Contact</h2>
     <p>📧 iliyaz3021@gmail.com</p>
   </section>
 
-</div>
+</main>
 
+<script src="script.js"></script>
 </body>
 </html>
