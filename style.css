@@ -5,6 +5,10 @@
   font-family: "Inter", system-ui, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #020617;
   color: #e5e7eb;
@@ -39,6 +43,34 @@ body {
   transform: translate(-50%, -50%);
   filter: blur(10px);
   z-index: 9999;
+}
+
+/* Floating Navbar */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 22px;
+  padding: 14px 28px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  border-radius: 999px;
+  z-index: 1000;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+  transition: opacity 0.4s ease;
+}
+
+.navbar a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
 }
 
 /* HERO */
@@ -104,7 +136,7 @@ body {
   padding-left: 12px;
 }
 
-/* CHIPS */
+/* SKILL CHIPS */
 .chips span {
   display: inline-block;
   margin: 6px;
@@ -129,7 +161,7 @@ body {
   text-decoration: none;
 }
 
-/* FADE */
+/* FADE IN */
 .fade-in {
   opacity: 0;
   animation: fade 1.2s forwards;
