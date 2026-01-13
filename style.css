@@ -6,25 +6,39 @@
 }
 
 body {
-  color: white;
   background: #020617;
+  color: #e5e7eb;
   overflow-x: hidden;
 }
 
-/* Animated Gradient Background */
+/* Animated Background */
 .bg-animation {
   position: fixed;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at 30% 30%, #38bdf8, transparent 40%),
-              radial-gradient(circle at 70% 70%, #6366f1, transparent 40%);
-  animation: moveBg 20s infinite alternate;
-  z-index: -1;
+  background:
+    radial-gradient(circle at 20% 30%, #38bdf8, transparent 40%),
+    radial-gradient(circle at 80% 70%, #6366f1, transparent 40%);
+  animation: moveBg 18s infinite alternate;
+  z-index: -2;
 }
 
 @keyframes moveBg {
   from { transform: translate(-10%, -10%); }
   to { transform: translate(-30%, -30%); }
+}
+
+/* Cursor Glow */
+.cursor-glow {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(56,189,248,0.35), transparent 60%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(10px);
+  z-index: 9999;
 }
 
 /* HERO */
@@ -52,14 +66,14 @@ body {
 }
 
 .hero-actions a {
+  margin: 0 12px;
   padding: 12px 26px;
-  margin: 0 10px;
   border-radius: 30px;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
-  text-decoration: none;
   color: #38bdf8;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .hero-actions a:hover {
@@ -87,7 +101,7 @@ body {
 .card h2 {
   margin-bottom: 14px;
   border-left: 4px solid #38bdf8;
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
 /* CHIPS */
@@ -97,9 +111,15 @@ body {
   padding: 8px 18px;
   border-radius: 20px;
   background: rgba(255,255,255,0.12);
+  transition: 0.3s;
 }
 
-/* PROJECT */
+.chips span:hover {
+  background: rgba(56,189,248,0.25);
+  transform: translateY(-3px);
+}
+
+/* PROJECTS */
 .project {
   margin-top: 20px;
 }
@@ -109,7 +129,7 @@ body {
   text-decoration: none;
 }
 
-/* ANIMATIONS */
+/* FADE */
 .fade-in {
   opacity: 0;
   animation: fade 1.2s forwards;
@@ -119,10 +139,10 @@ body {
 .delay2 { animation-delay: 1s; }
 
 @keyframes fade {
-  to { opacity: 1; transform: translateY(0); }
+  to { opacity: 1; }
 }
 
-/* Scroll Reveal */
+/* SCROLL REVEAL */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -135,6 +155,6 @@ body {
 }
 
 /* MOBILE */
-@media(max-width:600px){
+@media(max-width:600px) {
   .hero h1 { font-size: 36px; }
 }
